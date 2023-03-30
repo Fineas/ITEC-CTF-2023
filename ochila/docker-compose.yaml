@@ -1,0 +1,8 @@
+version: "3"
+services:
+  server:
+    build: .
+    container_name: format_pwn
+    ports:
+      - "60101:8889"
+    restart: always
