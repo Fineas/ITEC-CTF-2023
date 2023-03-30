@@ -1,8 +1,0 @@
-version: "3"
-services:
-  server:
-    build: .
-    container_name: formeaza
-    ports:
-      - "60100:8889"
-    restart: always
