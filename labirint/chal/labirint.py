@@ -1,6 +1,11 @@
+#!/usr/local/bin/python3
+
 import random
 import click
 import signal
+import os
+
+flag = os.environ['FLAG']
 
 LEVELS = [
     [
@@ -198,7 +203,7 @@ def main():
             result = play_lvl(level - 1)
 
         elif result == 'W':
-            print("ITEC{redacted}")
+            print(flag)
             return
 
         else:

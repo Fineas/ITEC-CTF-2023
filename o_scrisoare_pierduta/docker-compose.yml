@@ -2,7 +2,7 @@ version: "3"
 services:
   server:
     environment:
-        FLAG: ITEC{tr41m_4l4tur1_d3_34_p4n4_mur1m_474rna71_d3_34}
+        FLAG: ITEC{https://youtu.be/niiYWyglQMM}
     build: .
     container_name: scrisoare
     ports:

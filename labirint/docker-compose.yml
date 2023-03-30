@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    environment:
+        FLAG: ITEC{Și_încălecai_pe-o_căpșună_și_vă_spusei_o_minciună}
+    build: .
+    container_name: labirint
+    ports:
+      - "60005:8889"
+    restart: always
