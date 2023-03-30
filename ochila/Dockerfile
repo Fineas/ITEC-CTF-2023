@@ -6,7 +6,7 @@ RUN useradd -d /home/formeaza -u 8888 -m formeaza
 USER formeaza 
 
 COPY --chown=formeaza:formeaza xinetd /etc/xinetd.d/xinetd
-COPY --chown=formeaza:formeaza chal /home/formeaza
+COPY --chown=formeaza:formeaza Chal /home/formeaza
 
 RUN chmod +x /home/formeaza/*
 
