@@ -6,6 +6,7 @@ USER misc
 
 RUN pip3 install --no-cache-dir lark==1.1.5
 RUN pip3 install requests
+RUN pip3 install click
 
 COPY --chown=misc:misc xinetd /etc/xinetd.d/xinetd
 COPY --chown=misc:misc chal /home/misc
