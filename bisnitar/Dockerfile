@@ -8,4 +8,7 @@ RUN pip3 install --no-cache-dir lark==1.1.5
 
 COPY --chown=crypto:crypto xinetd /etc/xinetd.d/xinetd
 COPY --chown=crypto:crypto chal /home/crypto
+
+RUN chmod +x /home/crypto/chal/run.sh
+
 CMD ["/usr/sbin/xinetd", "-dontfork"]
