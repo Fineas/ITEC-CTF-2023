@@ -18,8 +18,6 @@ def afis():
 
 
 def ascunde(data1, data2):
-    print('!!',data1)
-    print('!!',data2)
         
     plaintext_length = len(data1)
     assert (plaintext_length >= 3), "Eroare lungime mesaj"
