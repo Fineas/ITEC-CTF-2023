@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    environment:
+        FLAG: ITEC{nu_umbl4_cu_0c4u4_m1c4}
+    build: .
+    container_name: bisnitar
+    ports:
+      - "60000:8888"
+    restart: always
