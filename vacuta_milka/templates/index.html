@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vacuta Milka</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  </head>
+  <body>
+    <h1>Da-mi un mesaj:</h1>
+    <form method="POST" action="/">
+      <input type="text" name="message">
+      <button type="submit">Trimite </button>
+    </form>
+    {% if output %}
+    <h2>SPUNE: </h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+  </body>
+</html>

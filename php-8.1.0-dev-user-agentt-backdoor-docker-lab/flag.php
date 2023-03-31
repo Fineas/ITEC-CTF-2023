@@ -1,0 +1,1 @@
+<?php //echo "ITEC{A1_INTR4T_P3_USA_D1N_SP1TE3} ?>
