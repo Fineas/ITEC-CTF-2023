@@ -1,8 +1,8 @@
-version: "3.3"
-
+version: "3"
 services:
-    fabrica:
-    build: .
-    ports:
-        - "40000:40000"
-    
+    server:
+        build: .
+        container_name: pacala
+        ports:
+            - "40000:40000"
+        restart: always

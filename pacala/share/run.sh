@@ -1,1 +1,1 @@
-/home/pwn/pacala
+/home/user/pacala
