@@ -1,0 +1,8 @@
+version: "3"
+services:
+  server:
+    build: .
+    container_name: flask1
+    ports:
+      - "60121:5000"
+    restart: always
