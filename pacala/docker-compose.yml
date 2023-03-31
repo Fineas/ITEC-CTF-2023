@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    environment:
+        FLAG: ITEC{Pr0s7_73-4_m41_f4cu7_m4-74_PACALA!}
+    build: .
+    container_name: pacala
+    ports:
+      - "60011:8889"
+    restart: always
