@@ -54,8 +54,12 @@ int autentificare() {
 }
 
 int main() {
-    printf("Pacala 2.0!\n");
-    printf("Cel mai pacalicios sistem tehnologic de pe intreg internetul.\n");
+
+    setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
+
+    puts("Pacala 2.0!");
+    puts("Cel mai pacalicios sistem tehnologic de pe intreg internetul.\n");
 
     if ( autentificare() ) {
         puts("[*] Autentificare cu succes!");
