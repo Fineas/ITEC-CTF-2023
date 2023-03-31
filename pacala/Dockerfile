@@ -1,12 +1,25 @@
-FROM gcc:12.2.0-bullseye
-RUN apt update -y && apt install -y xinetd && apt clean && rm -rf /var/lib/apt/lists/*
+FROM ubuntu:20.04
 
-RUN useradd -d /home/pwn -u 8888 -m pwn
-USER pwn
+# Invariants
+ARG PORT=40000
+ARG USERNAME=user
+ENV USERNAME ${USERNAME}
+RUN useradd -m $USERNAME
+RUN apt-get update && apt-get install -y \
+    python3 \
+    xinetd \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY --chown=pwn:pwn xinetd /etc/xinetd.d/xinetd
-COPY --chown=pwn:pwn chal /home/pwn
+# Challenge files
+ADD share /home/$USERNAME/
+ADD xinetd.conf /etc/xinetd.d/chal
+RUN chown root:root /home/$USERNAME
+RUN chmod 444 /home/$USERNAME/*
+RUN chmod +x /home/$USERNAME/run.sh /home/$USERNAME/pacala
+EXPOSE $PORT
 
-RUN chmod +x /home/pwn/*
-
-CMD ["/usr/sbin/xinetd", "-dontfork"]
+CMD [ \
+        "xinetd", \
+        "-dontfork", \
+        "-f", "/etc/xinetd.d/chal" \
+    ]
